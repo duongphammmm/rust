@@ -1,3 +1,9 @@
+#[derive(Debug)]
+struct Person<'a> {
+    name: &'a str,
+    age: u8
+}
+
 fn main() {
     println!("Hello, world!");
     
@@ -45,6 +51,12 @@ fn main() {
     // fmt::Debug using {:?} (need to put #[derive(Debug) at the start of the struct)
     // fmt::Display using {} (need to implement fmt::Display trait, hence ToString trait as well.
     
+    // Pretty print with Debug
+    let name = "Peter";
+    let age = 27;
+    let peter = Person {name, age};
+    println!("{:#?}", peter);
+
     // Precision
     println!("Hello {0} is {1:.5}", "x", 0.01);
     println!("Hello {1} is {2:.0$}", 5, "x", 0.01);
