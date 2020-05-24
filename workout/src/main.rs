@@ -6,6 +6,20 @@ fn main() {
     let simulated_random_number = 7;
 
     generate_workout(simulated_user_specified_value, simulated_random_number);
+
+    let x = 4;
+    // x is not parameter of closure, but is in the same scope, hence can still access
+    // borrow values imutably (Fn trait)
+    let equal_to_x = |z| z == x;
+    let w = 4;
+    assert!(equal_to_x(w));
+
+    let y = vec![1, 2, 3];
+    // move values into closure (FnOnce trait)
+    let equal_to_y = move |z| z == y;
+    // println!("can't use y here: {:?}", y);
+    let w = vec![1, 2, 3];
+    assert!(equal_to_y(w));    
 }
 
 struct Cacher<T>
