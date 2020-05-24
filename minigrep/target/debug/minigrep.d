@@ -1,1 +1,1 @@
-C:\Users\Duong\ Pham\Documents\mystuff\codes\rust\minigrep\target\debug\minigrep.exe: C:\Users\Duong\ Pham\Documents\mystuff\codes\rust\minigrep\src\lib.rs C:\Users\Duong\ Pham\Documents\mystuff\codes\rust\minigrep\src\main.rs
+/media/sf_rust/minigrep/target/debug/minigrep: /media/sf_rust/minigrep/src/lib.rs /media/sf_rust/minigrep/src/main.rs
