@@ -1,0 +1,1 @@
+C:\Users\Duong\ Pham\Documents\mystuff\codes\rust\iterator\target\debug\iterator.exe: C:\Users\Duong\ Pham\Documents\mystuff\codes\rust\iterator\src\lib.rs C:\Users\Duong\ Pham\Documents\mystuff\codes\rust\iterator\src\main.rs
