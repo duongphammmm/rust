@@ -17,6 +17,10 @@ fn main() {
     // Words starting with a vowel have "hay" added to the end
     let word = "hello".to_string();
     println!("Pig says: {:?}", translate(word));
+
+    // Create text interface to allow user to add employee names to a department in a company.
+    // User can then retrieve a list of people in a department or all people in the company
+    // by department, sorted alphabetically.
 }
 
 fn find_mean(nums: &Vec<i32>) -> f32 {
