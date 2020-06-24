@@ -12,6 +12,11 @@ fn main() {
     let mode = find_mode(&nums);
     println!("Mean: {:?}, median: {:?}, mode: {:?}", mean, median, mode);
 
+    // Convert strings to pig latin:
+    // First consonant of each word is moved to the end and "ay" is added
+    // Words starting with a vowel have "hay" added to the end
+    let word = "hello".to_string();
+    println!("Pig says: {:?}", translate(word));
 }
 
 fn find_mean(nums: &Vec<i32>) -> f32 {
@@ -55,4 +60,18 @@ fn find_mode(nums: &Vec<i32>) -> i32 {
         }
     }
     mode
+}
+
+fn translate(mut word: String) -> String {
+    let first = word.remove(0);
+    let vowels = vec!['a', 'e', 'i', 'o', 'u'];
+    if vowels.iter().any(|&v| v == first) {
+        word.push('-');
+        word.push_str("hay");
+    } else {
+        word.push('-');
+        word.push(first);
+        word.push_str("ay");
+    }
+    word
 }
