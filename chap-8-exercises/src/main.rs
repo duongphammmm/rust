@@ -12,12 +12,14 @@ fn main() {
     let mode = find_mode(&nums);
     println!("Mean: {:?}, median: {:?}, mode: {:?}", mean, median, mode);
 
+    // Ex. 2:
     // Convert strings to pig latin:
     // First consonant of each word is moved to the end and "ay" is added
     // Words starting with a vowel have "hay" added to the end
     let word = "hello".to_string();
     println!("Pig says: {:?}", translate(word));
 
+    // Ex. 3:
     // Create text interface to allow user to add employee names to a department in a company.
     // User can then retrieve a list of people in a department or all people in the company
     // by department, sorted alphabetically.
