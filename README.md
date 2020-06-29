@@ -4,7 +4,31 @@
 
 Following [The Rust Programming Languague](https://doc.rust-lang.org/book/)
 
-## Chapter 14: Cargo & Crate.io
+## CHAPTER 1: Getting Started
+
++ Install Rust (follow instructions [here](https://doc.rust-lang.org/book/ch01-01-installation.html))
++ Create a Project:
+  + `mkdir ~/projects`
+  + `cd ~/projects`
+  + `mkdir hello_world`
+  + `cd hello_world`
++ Run a Program:
+  + `rustc main.rs`
+  + `./main` (or `.\main.exe` in Windows)
+
+### Using Cargo
+
++ `cargo --version`
++ Create a Project:
+  + `cargo new hello_world`
+  + `cd hello_world`
++ Run a Program:
+  + `cargo build` and `.\target\debug\hello_world.exe`
+  + or `cargo run`
++ Check compilation without producing executable: `cargo check`
++ Build for Release: `cargo build --release` (executable will be in `target/release` instead)
+
+## CHAPTER 14: Cargo & Crate.io
 
 ### Release Profiles
 
