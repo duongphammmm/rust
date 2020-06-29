@@ -28,6 +28,67 @@ Following [The Rust Programming Languague](https://doc.rust-lang.org/book/)
 + Check compilation without producing executable: `cargo check`
 + Build for Release: `cargo build --release` (executable will be in `target/release` instead)
 
+## CHAPTER 2: Guessing Game
+
++ Standard input/output:
+
+```rust
+use std::io;
+
+fn main() {
+    let mut guess = String::new();
+    io::stdin().read_line(&mut guess).expect("Failed to read line");
+}
+```
+
++ `Result` type & `expect()` method for `Result::Err`
++ Print formatting: `println!("You guessed {}", guess)`;
++ `rand` crate:
+
+    Filename: Cargo.toml
+
+    ```rust
+    [dependencies]
+    rand = "0.5.5"
+    ```
+
+    Filename: src/main.rs
+
+    ```rust
+    use rand::Rng;
+
+    fn main() {
+        let secret_number = rand::thread_rng().gen_range(1, 101);
+        // --snip--
+    }
+    ```
+
++ Comparison:
+
+    Filename: src/main.rs
+
+    ```rust
+    use std::cmp::Ordering;
+
+    fn main() {
+        // --snip--
+        match guess.cmp(&secret_number) {
+            Ordering::Less => println!("too small!"),
+            Ordering::Greater => println!("too big!"),
+            Ordering::Equal => println!("you win!"),
+        }
+    }
++ Type conversion (`String` to `u32`): `let guess: u32 = guess.trim().parse().expect("Please type a number!");`
++ Loop:
+
+    Filename: src/main.rs
+    ```rust
+    loop {
+        // --snip--
+        break;
+    }
+    ```
+
 ## CHAPTER 14: Cargo & Crate.io
 
 ### Release Profiles
