@@ -151,3 +151,15 @@ Create binary and library crates similar to normal:
 + same imported dependencies from different crates will be collated, ensured same and added **once** to the root `Cargo.lock`
 + add tests to crates and run like normal (`cargo test` or `cargo test -p add-one` for specific crate)
 + each crates need to be published separately to crates.io
+
+### Install Binaries
+
++ to install tools that other developers have shared on crates.io
++ can only install packages with a binary target (`src/main.rs`), rather than a library target that cannot run on its own
++ `cargo install binary-name`
++ installed binaries are stored at `./.cargo/bin` (must include in `$PATH` in order to run after installation)
+
+### Custom Commands
+
++ if a binary in `$PATH` is named `cargo-something`, can run with `cargo something`
++ to list custom commands: `cargo --list`
